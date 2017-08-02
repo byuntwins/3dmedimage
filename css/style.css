@@ -19,7 +19,6 @@ img {
 .container {
   width: 95%;
   margin: 0 auto;
-  max-width: 1000px;
 }
 
 /*****typography****/
@@ -31,10 +30,9 @@ img {
   font-weight: 400;
   display: block;
   font-style: italic;
-  font-style:
 }
 
-@media (min-width:60rem){
+@media (min-width:50rem){
   .maintitle {
     font-size: 3.7rem;
   }
@@ -44,37 +42,130 @@ img {
 }
 
 /*****header*****/
-
 header {
-  margin: 1;
-  width: 100%
+  background-color: #FFF;
+  position: fixed;
+  padding: 25px;
+  width: 100%;
 }
 
-nav ul {
+header::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.logo {
+  float: left;
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+}
+
+.site-nav {
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  right: 0;
+  background-color: lightblue;
+}
+
+.site-nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-nav li {
-  display: inline-block;
-  width: auto;
-  margin: 1em auto;
+.site-nav li {
+  border-bottom: 1px solid #FFF;
 }
 
-nav a {
-  font-weight: 900;
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+.site-nav a {
+  color: white;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: .8rem;
-  padding: 1em;
-  color: #021b42;
+  display: block;
+  padding: 2em 6em;
 }
 
-nav a:hover,
-nav a:focus {
-  color: #4980d8;
-  text-decoration: underline;
+.site-nav a:hover,
+.site-nav a:focus {
+  background-color: green;
+  color: white;
+}
+
+
+.menu-toggle {
+  background-color: #FFF;
+  padding: 1em;
+  position: absolute;
+  right: 1em;
+  bottom: 101.3%;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background-color: black;
+  height: 3px;
+  width: 1.5em;
+  border-radius: 5px;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+
+
+@media (min-width: 50rem) {
+  header {
+   position: fixed;
+   background-color: #FFF;
+   margin: 0;
+   width: 100%;
+  }
+
+  .site-nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    top: 10%;
+    right: 50%;
+  }
+
+  .site-nav li {
+    display: inline-block;
+    margin: 1em auto;
+  }
+
+  .site-nav a {
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    padding: 1em;
+    color: #021b42;
+  }
+
+  .site-nav a:hover,
+  .site-nav a:focus {
+    color: #4980d8;
+    text-decoration: underline;
+  }
 }
 
 /*****home*****/
