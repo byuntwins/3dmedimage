@@ -1,0 +1,92 @@
+@import
+url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,400i,600,700,800,900');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/*****typography****/
+.maintitle {
+  font-size: 2.5rem;
+}
+
+.subtitle{
+  font-weight: 400;
+  display: block;
+  font-style: italic;
+  font-style:
+}
+
+@media (min-width:60rem){
+  .maintitle {
+    font-size: 3.7rem;
+  }
+}
+
+/*****header*****/
+
+header {
+  margin: 1;
+  width: 100%
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  width: auto;
+  margin: 1em auto;
+}
+
+nav a {
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8rem;
+  padding: 1em;
+  color: #021b42;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #4980d8;
+}
+
+/*****home*****/
+.home {
+  background-image: url(../img/homebackground6.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10em 0;
+  color: #FFF;
+}
+
+@media (min-width: 60rem) {
+  .home {
+    height: 100vh;
+    padding-top: 35vh;
+  }
+}
+
+/*****about*****/
+.about
